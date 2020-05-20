@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let HOST = document.location.hostname
+        let BASE = document.location.protocol + '//' + document.location.host
+
+        // Object.keys(localStorage).map(function (store) {
+        // if (store.toLowerCase() !== 'iamoston' && store.toLowerCase() !== '@msisdn') {
+        //   localStorage.removeItem(store);
+        // }
+        // });
+
+        document.write('<base href="' + BASE + '/" />');
+
+    </script>
+
+    {{> views/head }}
+
+</head>
+
+<body>
+
+    {{> views/home }}
+
+    <style type="text/css">
+        @font-face {
+            font-family: "Simplon Headline";
+            src: url("fonts/simplonoi-headline.woff") format("woff");
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Simplon";
+            src: url("fonts/simplonbp-regular-webfont.woff") format("woff");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <script type="text/javascript" src="bootstrap.js"></script>
+</body>
+
+</html>
