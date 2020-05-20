@@ -1,8 +1,6 @@
-# OI - LP de Migração Facebook
+# OSTORAGE
 
-Código da LP de migração para os usuários de OI. 
-No desenvolvimento dessa LP foi utilizado es6, Handlebars e sass/scss
-Para a compilação dos elementos utilizamos Webpack, suas configurações encontram-se em webapack.config.js
+Tentativa de criar algo para manipular o storage do browser
 
 
 ## Instalação
