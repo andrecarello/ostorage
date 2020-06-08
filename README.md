@@ -24,8 +24,6 @@ Após o servidor estará disponivel em [localhost:8080](http://localhost:8080/)
 yarn production / npm run production
 ```
 
-## Desenvolvido por Oston <ti@oston.io>
-
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
