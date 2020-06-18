@@ -1,6 +1,10 @@
 # OSTORAGE
 
+<<<<<<< HEAD
 Storage Management
+=======
+Tentativa de criar algo para manipular o storage do browser
+>>>>>>> 5a9abda46dc154526fd3318d14296169ec96aa0b
 
 
 ## Instalação
@@ -24,8 +28,11 @@ Após o servidor estará disponivel em [localhost:8080](http://localhost:8080/)
 yarn production / npm run production
 ```
 
+<<<<<<< HEAD
 ## Desenvolvido por André Carello <andrelino.cl@gmail.com>
 
+=======
+>>>>>>> 5a9abda46dc154526fd3318d14296169ec96aa0b
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
