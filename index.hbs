@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
     <script>
-        let HOST = document.location.hostname
-        let BASE = document.location.protocol + '//' + document.location.host
-
-        // Object.keys(localStorage).map(function (store) {
-        // if (store.toLowerCase() !== 'iamoston' && store.toLowerCase() !== '@msisdn') {
-        //   localStorage.removeItem(store);
-        // }
-        // });
-
-        document.write('<base href="' + BASE + '/" />');
-
+        Object.keys(localStorage).map(function (store) {
+            if (store.toLowerCase() !== 'iamoston') {
+                localStorage.removeItem(store);
+            }
+        });
     </script>
+
+<head>
 
     {{> views/head }}
 
@@ -24,24 +19,22 @@
 
     {{> views/home }}
 
-    <style type="text/css">
-        @font-face {
-            font-family: "Simplon Headline";
-            src: url("fonts/simplonoi-headline.woff") format("woff");
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
+    <script>
+        const hashCode = length => {
+            let result           = '';
+            const characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const charactersLength = characters.length;
+            for ( let i = 0; i < length; i++ ) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
         }
 
-        @font-face {
-            font-family: "Simplon";
-            src: url("fonts/simplonbp-regular-webfont.woff") format("woff");
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-        }
-    </style>
-    <script type="text/javascript" src="bootstrap.js"></script>
+        const script = document.createElement('script');
+        script.src ='bootstrap.js?u=' + hashCode(20);
+        script.type = 'text/javascript';
+        document.getElementsByTagName('body')[0].appendChild(script);
+    </script>
 </body>
 
 </html>

@@ -1,10 +1,10 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const CompressionPlugin = require('compression-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HandlebarsPlugin = require("handlebars-webpack-plugin");
 
-const path = require('path');
+const path = require("path");
 
 module.exports = env => {
     return {
@@ -17,16 +17,14 @@ module.exports = env => {
         plugins: [
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
-                filename: 'app.css'
+                filename: "app.css"
             }),
             new CopyWebpackPlugin([
-                // {from: 'template.html', to: 'index.html'},
-                'index.html',
-                { from: 'images', to: 'images' },
-                { from: 'fonts', to: 'fonts' }
+                // {from: "template.html", to: "index.html"},
+                "index.html",
             ]),
             new CompressionPlugin({
-                algorithm: 'gzip',
+                algorithm: "gzip",
             }),
             new HandlebarsPlugin({
                 entry: path.join(process.cwd(), "./index.hbs"),
@@ -50,8 +48,8 @@ module.exports = env => {
                     test: /\.(sa|sc|c)ss$/,
                     use: [
                         MiniCssExtractPlugin.loader,
-                        'css-loader',
-                        'sass-loader'
+                        "css-loader",
+                        "sass-loader"
                     ]
                 }
             ]
